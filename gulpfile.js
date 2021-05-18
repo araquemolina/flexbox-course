@@ -1,7 +1,13 @@
-//  Require Gulp into file and define the variable
 var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
-//  Run the example task, if installed correctly and "gulp talktome" is ran, "Hello From Zestcode" should be printed in the logs
-gulp.task('talktome', function() {
-console.log('Hello From Zestcode');
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+
+  gulp.watch("*.html").on("change", reload);
 });
