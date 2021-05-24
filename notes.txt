@@ -1,0 +1,1 @@
+the child is subject to the parent, meaning in order for flex to work properly there is a hierchy that needs to be fallowed. there should be a 'container' that has flex display and justify content and center items, then get on the child class to flex display that and flex-dirrection
